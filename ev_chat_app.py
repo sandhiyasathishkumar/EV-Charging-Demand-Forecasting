@@ -65,7 +65,7 @@ p, label, li { color: #dce8f7; }
 # =====================================================
 # 3. SETTINGS
 # =====================================================
-CSV_PATH = Path(r"C:\Users\sandh\ev_forecast_results.csv")
+CSV_PATH = Path(__file__).parent / "ev_forecast_results.csv"
 OLLAMA_URL = "http://localhost:11434/api/chat"
 OLLAMA_MODEL = "qwen2.5:3b"
 
