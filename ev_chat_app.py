@@ -299,7 +299,14 @@ Use these forecast records when relevant:
         return "The AI is taking longer than expected. Please try again."
     except Exception as error:
         return f"Something went wrong while contacting the AI: {error}"
-
+        
+def ask_local_ai(question):
+    return (
+        "The AI Chat Assistant's local Ollama service is not available "
+        "in the online version yet. You can still use the dashboard, "
+        "station comparison, performance analysis, resource optimization, "
+        "station map, and dataset management features."
+    )
 def answer_question(question):
     direct = get_station_answer(question)
     return direct if direct is not None else ask_local_ai(question)
